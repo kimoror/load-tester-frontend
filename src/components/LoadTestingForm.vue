@@ -1,16 +1,16 @@
 <template>
   <form @submit.prevent="handleRequest">
     <div class="form-group">
-      <label for="rate">rate</label>
+      <label for="rate">Кол-во запросов в секунду</label>
       <input v-model= "rateF" class="form-control">
     </div>
     <div class="form-group">
-      <label for="durationSeconds">durationSeconds</label>
+      <label for="durationSeconds">Длительность в секундах</label>
       <input v-model= "durationSecondsF" class="form-control">
     </div>
     <div class="form-group">
-      <label for="url">url</label>
-      <input v-model= "body.url" class="form-control">
+      <label for="url">Ссылка для нагрузки</label>
+      <input v-model= "body.url" placeholder="https://example.com" class="form-control">
     </div>
     <div class="form-group">
       <label for="testBody">Введите тело теста</label>
@@ -18,11 +18,11 @@
 
     <div class="form-group">
       <label for="testBody">Имя</label>
-      <input v-model= "body.testBody.name" placeholder="Вставь сюда json" class="form-control">
+      <input v-model= "body.testBody.name"  class="form-control">
     </div>
     <div class="form-group">
       <label for="testBody">Фамилия</label>
-      <input v-model= "body.testBody.surname" placeholder="Вставь сюда json" class="form-control">
+      <input v-model= "body.testBody.surname" class="form-control">
     </div>
     <div class="form-group">
       <button type="submit" class="btn btn-primary btn-block">
